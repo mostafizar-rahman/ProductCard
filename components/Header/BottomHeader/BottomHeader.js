@@ -4,7 +4,7 @@ import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 
 const BottomHeader = () => {
   return (
-    <div className="mx-auto max-w-7xl py-5 flex justify-between items-center">
+    <div className="mx-auto max-w-7xl px-3 py-5 flex justify-between items-center">
       <div className="bg-orange-500 px-3 py-2 cursor-pointer text-white">
         <b>SHOP BY CATEGORY</b>
       </div>

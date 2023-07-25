@@ -61,62 +61,8 @@ const productsList = [
   },
 ];
 const SortingProducts = () => {
-  const [innerWidth, setInnerWidth] = useState(1195);
-
-  // --------- Get screen current width
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      const width = window.screen.width;
-      setInnerWidth(width);
-    });
-  }, []);
-
-  // ------------ This condition for new product and Best Sell products
-  let isSlideHeight1;
-  switch (innerWidth) {
-    case 1195:
-      isSlideHeight1 = 50;
-      break;
-    case innerWidth < 1195 && innerWidth > 800:
-      isSlideHeight1 = 60;
-      break;
-    case innerWidth < 800 && innerWidth > 767:
-      isSlideHeight1 = 70;
-      break;
-    case innerWidth < 767 && innerWidth > 656:
-      isSlideHeight1 = 20;
-      break;
-    case innerWidth < 656 && innerWidth > 400:
-      isSlideHeight1 = 50;
-      break;
-    default:
-      break;
-  }
-
-  // -------------- This condition for Hot Trend
-  let isSlideHeight2;
-  switch (innerWidth) {
-    case 1195:
-      isSlideHeight2 = 50;
-      break;
-    case innerWidth < 1195 && innerWidth > 800:
-      isSlideHeight2 = 60;
-      break;
-    case innerWidth < 800 && innerWidth > 767:
-      isSlideHeight2 = 70;
-      break;
-    case innerWidth < 767 && innerWidth > 656:
-      isSlideHeight2 = 30;
-      break;
-    case innerWidth < 656 && innerWidth > 400:
-      isSlideHeight2 = 50;
-      break;
-    default:
-      break;
-  }
-
   return (
-    <section className="mx-auto max-w-7xl  mt-16 grid lg:grid-cols-[20%_auto_20%] md:grid-cols-[25%_auto] gap-10 grid-cols-1 px-3 ">
+    <section className="mx-auto max-w-7xl  mt-16 hidden xl:grid lg:grid-cols-[20%_auto_20%] md:grid-cols-[25%_auto] gap-10 grid-cols-1 px-3 ">
       <div className="relative">
         <div>
           <h3 className="text-lg font-medium">New Products</h3>
@@ -125,8 +71,9 @@ const SortingProducts = () => {
           <div>
             <CarouselProvider
               naturalSlideWidth={100}
-              naturalSlideHeight={isSlideHeight1}
+              naturalSlideHeight={50}
               totalSlides={2}
+              
             >
               <Slider>
                 <div className="flex md:block">
@@ -154,11 +101,11 @@ const SortingProducts = () => {
         </div>
       </div>
       {/* ---------- Hot Trend Start */}
-      <div>
+      <div className="relative">
         <h3 className="text-lg font-medium">Hot Trend</h3>
         <CarouselProvider
           naturalSlideWidth={100}
-          naturalSlideHeight={isSlideHeight2}
+          naturalSlideHeight={50}
           totalSlides={2}
         >
           <Slider>
@@ -175,6 +122,14 @@ const SortingProducts = () => {
               ))}
             </div>
           </Slider>
+          <div className="absolute top-0 right-0 space-x-4">
+            <ButtonBack>
+              <AiOutlineArrowLeft />
+            </ButtonBack>
+            <ButtonNext>
+              <AiOutlineArrowRight />
+            </ButtonNext>
+          </div>
         </CarouselProvider>
       </div>
       {/* ---------- Hot Trend End */}
@@ -184,7 +139,7 @@ const SortingProducts = () => {
           <div>
             <CarouselProvider
               naturalSlideWidth={100}
-              naturalSlideHeight={isSlideHeight1}
+              naturalSlideHeight={50}
               totalSlides={2}
             >
               <Slider>

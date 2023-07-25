@@ -46,15 +46,13 @@ const Banner = () => {
           draggable={false}
           showDots={true}
           responsive={responsive}
-          ssr={false} // means to render carousel on server-side.
+          ssr={false} 
           infinite={true}
           autoPlaySpeed={3000}
           autoPlay={true}
           keyBoardControl={true}
           customTransition="all .5"
           transitionDuration={500}
-          // renderArrowsWhenDisabled={false}
-          // containerClass="carousel-container"
           removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
@@ -68,7 +66,7 @@ const Banner = () => {
               className="w-full h-[600px]"
             />
             <div className="max-w-sm absolute top-1/4 left-0 z-50 bg-black bg-opacity-30 text-slate-100 p-3">
-              <h3 className="lg:text-3xl text-xl font-semibold">Chear</h3>
+              <h3 className="lg:text-3xl text-xl font-semibold">Sofa Set</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
                 autem quis? Ullam cum aut temporibus?
@@ -84,7 +82,7 @@ const Banner = () => {
               className="w-full h-[600px]"
             />
             <div className="max-w-sm absolute top-1/4 left-0 z-50 bg-black bg-opacity-30 text-slate-100 p-3">
-              <h3 className="lg:text-3xl text-xl font-semibold">Chear</h3>
+              <h3 className="lg:text-3xl text-xl font-semibold">Bed</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
                 autem quis? Ullam cum aut temporibus?
@@ -100,7 +98,7 @@ const Banner = () => {
               className="w-full h-[600px]"
             />
             <div className="max-w-sm absolute top-1/4 left-0 z-50 bg-black bg-opacity-30 text-slate-100 p-3">
-              <h3 className="lg:text-3xl text-xl font-semibold">Chear</h3>
+              <h3 className="lg:text-3xl text-xl font-semibold">Sofa Set</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
                 autem quis? Ullam cum aut temporibus?

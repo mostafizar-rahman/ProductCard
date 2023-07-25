@@ -1,4 +1,5 @@
 import React from "react";
+import { AiOutlineUser } from "react-icons/ai";
 
 const TopHeader = () => {
   return (
@@ -19,7 +20,9 @@ const TopHeader = () => {
         </button>
       </div>
       <div>
-        <button>My Account</button>
+        <button>
+          <AiOutlineUser className="text-2xl"/>
+        </button>
       </div>
     </div>
   );
